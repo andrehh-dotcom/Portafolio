@@ -884,19 +884,8 @@ html[data-theme="light"] .button-primary {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border: 7px solid var(--surface-solid);
+  border: 0;
   border-radius: 50%;
-  background: var(--surface-soft);
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.35);
-}
-
-.profile-photo::after {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(to top, rgba(var(--purple-rgb), 0.14), transparent 48%);
-  content: "";
-  pointer-events: none;
 }
 
 .hero-photo {
@@ -904,17 +893,10 @@ html[data-theme="light"] .button-primary {
   inset: 0;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
   object-position: center;
-  opacity: 0;
-  transform: scale(1.035);
-  transition: opacity 350ms ease, transform 500ms ease;
-}
-
-.profile-photo.is-image-loaded .hero-photo {
   opacity: 1;
-  transform: scale(1);
 }
 
 .floating-chip {
