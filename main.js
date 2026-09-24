@@ -43,19 +43,8 @@ function initializeProfileImage() {
   };
 
   image.addEventListener("load", showImage, { once: true });
-  image.addEventListener(
-    "error",
-    () => {
-      image.alt = "Perfil gráfico de Orlando André Huapaya Huapaya";
-      image.src = "./perfil-fallback.svg";
-    },
-    { once: true },
-  );
 
-  if (image.complete && image.naturalWidth === 0) {
-    image.alt = "Perfil gráfico de Orlando André Huapaya Huapaya";
-    image.src = "./perfil-fallback.svg";
-  } else if (image.complete && image.naturalWidth > 0) {
+  if (image.complete && image.naturalWidth > 0) {
     showImage();
   }
 }
