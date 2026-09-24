@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio de Orlando André Huapaya Huapaya, estudiante de Ingeniería de Sistemas en la Universidad Autónoma del Perú."
+    />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta property="og:title" content="Orlando Huapaya | Portafolio" />
+    <meta
+      property="og:description"
+      content="Estudiante de Ingeniería de Sistemas, interesado en desarrollo de software y bases de datos."
+    />
+    <meta property="og:type" content="website" />
+
+    <title>Orlando Huapaya | Portafolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./perfil-fallback.svg" type="image/svg+xml" />
+    <script>
+      (() => {
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem("portfolio-theme");
+        } catch {
+          savedTheme = null;
+        }
+        document.documentElement.dataset.theme = savedTheme === "light" ? "light" : "dark";
+      })();
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24">
+        <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" />
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.4A5.8 5.8 0 0 0 19.3 3 5.4 5.4 0 0 0 19.1 0S17.9-.4 15 1.5a14 14 0 0 0-7 0C5-.4 3.9 0 3.9 0a5.4 5.4 0 0 0-.2 3A5.8 5.8 0 0 0 2.2 7.1c0 5.8 3.5 7 6.8 7.4A4.8 4.8 0 0 0 8 18v4M8 19c-3 .9-3-1.5-4-2" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+      </symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="icon-university" viewBox="0 0 24 24">
+        <path d="m3 9 9-5 9 5-9 5-9-5Zm3 3v5c3 3 9 3 12 0v-5M21 10v6" />
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="m8 9-4 3 4 3m8-6 4 3-4 3m-3-8-2 10" />
+      </symbol>
+      <symbol id="icon-database" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="5" rx="8" ry="3" />
+        <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+      </symbol>
+      <symbol id="icon-sparkle" viewBox="0 0 24 24">
+        <path d="m12 3 1.4 4.6L18 9l-4.6 1.4L12 15l-1.4-4.6L6 9l4.6-1.4L12 3Zm6 12 .8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8L18 15Z" />
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24">
+        <path d="M15 3h6v6m0-6-9 9M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      </symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24">
+        <path d="m22 2-7 20-4-9-9-4 20-7Z" />
+        <path d="M22 2 11 13" />
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24">
+        <path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z" />
+      </symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+    </svg>
+
+    <div class="page-background" aria-hidden="true">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <div class="ambient ambient-three"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <header class="site-header" data-header>
+      <nav class="navbar container" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span class="brand-name">Orlando Huapaya</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="navigation" id="navigation" data-navigation>
+          <ul class="nav-links">
+            <li><a class="nav-link is-active" href="#inicio">Inicio</a></li>
+            <li><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+            <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li><a class="nav-link" href="#formacion">Formación</a></li>
+            <li><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+
+          <button
+            class="theme-toggle mobile-theme-toggle"
+            type="button"
+            aria-label="Cambiar a modo claro"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">
+              <svg><use href="#icon-moon"></use></svg>
+            </span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">
+              <svg><use href="#icon-sun"></use></svg>
+            </span>
+          </button>
+        </div>
+
+        <button
+          class="theme-toggle desktop-theme-toggle"
+          type="button"
+          aria-label="Cambiar a modo claro"
+          aria-pressed="false"
+          data-theme-toggle
+        >
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">
+            <svg><use href="#icon-moon"></use></svg>
+          </span>
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">
+            <svg><use href="#icon-sun"></use></svg>
+          </span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+      <section class="hero section" id="inicio" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="availability-badge reveal">
+              <span class="status-dot" aria-hidden="true"></span>
+              Disponible para nuevas conexiones
+            </div>
+
+            <h1 class="hero-title reveal" id="hero-title" style="--reveal-delay: 80ms">
+              Orlando André
+              <span>Huapaya Huapaya</span>
+            </h1>
+
+            <div class="hero-role reveal" style="--reveal-delay: 150ms">
+              <span class="role-line" aria-hidden="true"></span>
+              <p>Estudiante de Ingeniería de Sistemas</p>
+            </div>
+
+            <p class="hero-description reveal" style="--reveal-delay: 220ms">
+              Soy estudiante de <strong>8vo ciclo</strong> en la
+              <strong>Universidad Autónoma del Perú</strong>. Me interesa crear soluciones
+              de software y bases de datos que mejoren la experiencia de las personas.
+            </p>
+
+            <div class="hero-actions reveal" style="--reveal-delay: 290ms">
+              <a class="button button-primary" href="#contacto">
+                Contáctame
+                <svg aria-hidden="true"><use href="#icon-arrow"></use></svg>
+              </a>
+              <a class="button button-secondary" href="#sobre-mi">
+                Sobre mí
+              </a>
+              <a class="button button-ghost" href="./Orlando-Huapaya-CV.pdf" download>
+                <svg aria-hidden="true"><use href="#icon-download"></use></svg>
+                Descargar CV
+              </a>
+            </div>
+
+            <div class="hero-social reveal" style="--reveal-delay: 360ms">
+              <span>Encuéntrame en</span>
+              <a href="https://github.com/andrehh-dotcom" target="_blank" rel="noreferrer" aria-label="GitHub de Orlando Huapaya">
+                <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+                <span>andrehh-dotcom</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" style="--reveal-delay: 180ms" data-tilt>
+            <div class="visual-aura" aria-hidden="true"></div>
+            <div class="orbit orbit-large" aria-hidden="true"></div>
+            <div class="orbit orbit-small" aria-hidden="true"></div>
+
+            <div class="portrait-frame">
+              <div class="corner corner-top-left" aria-hidden="true"></div>
+              <div class="corner corner-top-right" aria-hidden="true"></div>
+              <div class="corner corner-bottom-left" aria-hidden="true"></div>
+              <div class="corner corner-bottom-right" aria-hidden="true"></div>
+
+              <div class="profile-photo" data-profile-photo>
+                <div class="profile-fallback" aria-hidden="true">
+                  <span>OH</span>
+                  <small>&lt;/&gt;</small>
+                </div>
+                <img
+                  src="./perfil.jpg"
+                  alt="Fotografía de Orlando André Huapaya Huapaya"
+                  data-profile-image
+                />
+              </div>
+            </div>
+
+            <div class="floating-chip chip-code" aria-hidden="true">
+              <span class="chip-icon"><svg><use href="#icon-code"></use></svg></span>
+              <span><strong>Desarrollo</strong> web</span>
+            </div>
+
+            <div class="floating-chip chip-data" aria-hidden="true">
+              <span class="chip-icon"><svg><use href="#icon-database"></use></svg></span>
+              <span><strong>Bases</strong> de datos</span>
+            </div>
+
+            <div class="cycle-stamp" role="img" aria-label="Octavo ciclo">
+              <span>08</span>
+              <small>ciclo</small>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-indicator" href="#sobre-mi" aria-label="Ir a la sección Sobre mí">
+          <span>Descubrir</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="section about-section" id="sobre-mi" aria-labelledby="about-title">
+        <div class="container">
+          <header class="section-heading reveal">
+            <div>
+              <span class="section-kicker">01 / Sobre mí</span>
+              <h2 id="about-title">Construyendo con curiosidad y <span>propósito.</span></h2>
+            </div>
+            <p>
+              Un vistazo a mi formación, intereses y la mentalidad con la que abordo cada nuevo
+              desafío.
+            </p>
+          </header>
+
+          <div class="about-grid">
+            <article class="about-copy panel reveal">
+              <div class="panel-icon" aria-hidden="true">
+                <svg><use href="#icon-sparkle"></use></svg>
+              </div>
+              <h3>Hola, soy Orlando <span aria-hidden="true">👋</span></h3>
+              <p>
+                Soy estudiante de Ingeniería de Sistemas y me encuentro en el octavo ciclo de la
+                Universidad Autónoma del Perú. Me interesa especialmente el desarrollo de
+                interfaces web que combinen diseño y tecnología.
+              </p>
+              <p>
+                Me quedo cada vez más interesado en el desarrollo de software, el modelado de
+                bases de datos y la creación de interfaces claras y accesibles. Busco aprender
+                mediante la práctica, resolver problemas con curiosidad y seguir mejorando.
+              </p>
+              <div class="about-tags" role="list" aria-label="Áreas de interés">
+                <span role="listitem">Desarrollo de software</span>
+                <span role="listitem">Bases de datos</span>
+                <span role="listitem">Interfaces web</span>
+              </div>
+            </article>
+
+            <div class="about-stats" role="list" aria-label="Datos académicos">
+              <article class="stat-card reveal" role="listitem" style="--reveal-delay: 80ms">
+                <div class="stat-icon" aria-hidden="true"><svg><use href="#icon-sparkle"></use></svg></div>
+                <strong data-counter="8" data-suffix=".º">8.º</strong>
+                <span>Ciclo actual</span>
+                <p>Universidad Autónoma</p>
+              </article>
+
+              <article class="stat-card reveal" role="listitem" style="--reveal-delay: 140ms">
+                <div class="stat-icon" aria-hidden="true"><svg><use href="#icon-university"></use></svg></div>
+                <strong>UA</strong>
+                <span>Universidad</span>
+                <p>Autónoma del Perú</p>
+              </article>
+
+              <article class="stat-card reveal" role="listitem" style="--reveal-delay: 200ms">
+                <div class="stat-icon" aria-hidden="true"><svg><use href="#icon-code"></use></svg></div>
+                <strong>ING.</strong>
+                <span>Carrera</span>
+                <p>Sistemas</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
+        <div class="container">
+          <header class="section-heading reveal">
+            <div>
+              <span class="section-kicker">02 / Proyectos</span>
+              <h2 id="projects-title">Ideas que toman <span>forma.</span></h2>
+            </div>
+            <p>
+              Proyectos donde la curiosidad, la tecnología y el diseño se encuentran.
+            </p>
+          </header>
+
+          <article class="project-card reveal">
+            <div class="project-preview" role="img" aria-label="Vista previa del código del proyecto">
+              <div class="browser-frame">
+                <div class="browser-bar">
+                  <div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                  <div class="browser-address"><span></span> portafolio.local</div>
+                  <div class="browser-menu" aria-hidden="true">•••</div>
+                </div>
+
+                <div class="code-window" aria-hidden="true">
+                  <div class="code-heading">
+                    <span>portafolio.html</span>
+                    <span>Visual Studio Code</span>
+                  </div>
+                  <div class="code-content" aria-hidden="true">
+                    <div class="code-row"><i>01</i><code><span class="token-purple">&lt;main</span> <span class="token-blue">class</span>=<span class="token-green">"portfolio"</span><span class="token-purple">&gt;</span></code></div>
+                    <div class="code-row"><i>02</i><code>&nbsp;&nbsp;<span class="token-purple">&lt;section</span> <span class="token-blue">id</span>=<span class="token-green">"hero"</span><span class="token-purple">&gt;</span></code></div>
+                    <div class="code-row"><i>03</i><code>&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-purple">&lt;h1</span><span class="token-purple">&gt;</span>Hola<span class="token-purple">&lt;/h1&gt;</span></code></div>
+                    <div class="code-row"><i>04</i><code>&nbsp;&nbsp;<span class="token-purple">&lt;/section&gt;</span></code></div>
+                    <div class="code-row"><i>05</i><code><span class="token-purple">&lt;/main&gt;</span></code></div>
+                    <div class="code-row code-gap"><i>06</i><code></code></div>
+                    <div class="code-row"><i>07</i><code><span class="token-pink">:root</span> <span class="token-purple">{</span></code></div>
+                    <div class="code-row"><i>08</i><code>&nbsp;&nbsp;<span class="token-cyan">--accent</span>: <span class="token-orange">#00d2ff</span><span class="token-purple">;</span></code></div>
+                    <div class="code-row"><i>09</i><code>&nbsp;&nbsp;<span class="token-cyan">--secondary</span>: <span class="token-orange">#9d4edd</span><span class="token-purple">;</span></code></div>
+                    <div class="code-row"><i>10</i><code><span class="token-purple">}</span></code></div>
+                    <div class="code-row code-gap"><i>11</i><code></code></div>
+                    <div class="code-row"><i>12</i><code><span class="token-yellow">const</span> <span class="token-blue">pasión</span> = <span class="token-green">"crear"</span><span class="token-purple">;</span></code></div>
+                    <div class="code-row"><i>13</i><code><span class="token-pink">console</span>.<span class="token-blue">log</span>(pasión);</code></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="preview-glow" aria-hidden="true"></div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-status"><span></span> Proyecto personal</div>
+              <h3>Portafolio personal</h3>
+              <p>
+                Una experiencia web moderna y responsive para presentar mi formación, intereses y
+                proyectos. Diseñada con una estética oscura, navegación fluida y foco en
+                accesibilidad.
+              </p>
+
+              <ul class="tech-list" aria-label="Tecnologías utilizadas">
+                <li><span>&lt;</span>HTML5</li>
+                <li><span>#</span>CSS3</li>
+                <li><span>JS</span>JavaScript</li>
+              </ul>
+
+              <a
+                class="project-link"
+                href="https://github.com/andrehh-dotcom"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Abrir mi GitHub
+                <svg aria-hidden="true"><use href="#icon-external"></use></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section education-section" id="formacion" aria-labelledby="education-title">
+        <div class="container">
+          <header class="section-heading reveal">
+            <div>
+              <span class="section-kicker">03 / Formación</span>
+              <h2 id="education-title">Aprender para <span>transformar.</span></h2>
+            </div>
+            <p>
+              Mi camino académico se orienta al desarrollo de software, los datos y la tecnología
+              aplicada.
+            </p>
+          </header>
+
+          <div class="education-grid">
+            <article class="education-card panel reveal">
+              <div class="education-topline">
+                <div class="education-logo" aria-hidden="true">
+                  <svg><use href="#icon-university"></use></svg>
+                </div>
+                <span class="education-status"><i></i> En curso</span>
+              </div>
+
+              <span class="education-cycle">8vo ciclo · <span data-current-year>2026</span></span>
+              <h3>Universidad Autónoma del Perú</h3>
+              <p class="education-career">Ingeniería de Sistemas</p>
+
+              <div class="education-divider"></div>
+
+              <div class="education-detail">
+                <svg aria-hidden="true"><use href="#icon-code"></use></svg>
+                <div>
+                  <strong>Perfil de la carrera</strong>
+                  <span>Formación en sistemas, software y tecnología</span>
+                </div>
+              </div>
+              <div class="education-detail">
+                <svg aria-hidden="true"><use href="#icon-database"></use></svg>
+                <div>
+                  <strong>Áreas de interés</strong>
+                  <span>Desarrollo de software y bases de datos</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="learning-card reveal" style="--reveal-delay: 100ms">
+              <span class="learning-label">Mentalidad</span>
+              <h3>Aprender, construir, repetir.</h3>
+              <p>
+                Cada proyecto es una oportunidad para преобразar teoría en práctica, mejorar
+                decisiones y seguir creciendo como futuro ingeniero de sistemas.
+              </p>
+
+              <div class="learning-list">
+                <div><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>Curiosidad por la tecnología</span></div>
+                <div><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>Aprendizaje continuo</span></div>
+                <div><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>Resolución de problemas</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-shell reveal">
+            <div class="contact-info">
+              <span class="section-kicker">04 / Contacto</span>
+              <h2 id="contact-title">¿Tienes una idea? <span>Conversemos.</span></h2>
+              <p>
+                Me encantaría conocer tus ideas, recibir tus comentarios o explorar nuevas
+                oportunidades para crecer y aprender.
+              </p>
+
+              <div class="contact-details">
+                <a href="mailto:ohuapayah@autonoma.edu.pe">
+                  <span class="contact-icon"><svg aria-hidden="true"><use href="#icon-mail"></use></svg></span>
+                  <div>
+                    <small>Correo electrónico</small>
+                    <strong>ohuapayah@autonoma.edu.pe</strong>
+                  </div>
+                </a>
+
+                <div>
+                  <span class="contact-icon"><svg aria-hidden="true"><use href="#icon-pin"></use></svg></span>
+                  <div>
+                    <small>Ubicación</small>
+                    <strong>Lima, Perú</strong>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="contact-icon"><svg aria-hidden="true"><use href="#icon-university"></use></svg></span>
+                  <div>
+                    <small>Universidad</small>
+                    <strong>Universidad Autónoma del Perú</strong>
+                    <p>Estudiante de Ingeniería de Sistemas · 8vo ciclo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              data-contact-form
+              action="mailto:ohuapayah@autonoma.edu.pe"
+              method="post"
+              enctype="text/plain"
+              aria-labelledby="form-title"
+              novalidate
+            >
+              <div class="form-heading">
+                <div>
+                  <span>Envío</span>
+                  <h3 id="form-title">Cuéntame lo que tengas en mente</h3>
+                </div>
+                <span class="form-symbol" aria-hidden="true">&lt;/&gt;</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name">Nombre</label>
+                  <input id="name" name="name" type="text" placeholder="Tu nombre" autocomplete="name" aria-describedby="name-error" required minlength="2" />
+                  <small class="field-error" id="name-error">Ingresa un nombre válido.</small>
+                </div>
+
+                <div class="form-field">
+                  <label for="email">Correo</label>
+                  <input id="email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" aria-describedby="email-error" required />
+                  <small class="field-error" id="email-error">Ingresa un correo válido.</small>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="subject">Asunto</label>
+                <input id="subject" name="subject" type="text" placeholder="¿Sobre qué quieres hablar?" aria-describedby="subject-error" required minlength="3" />
+                <small class="field-error" id="subject-error">Ingresa un asunto.</small>
+              </div>
+
+              <div class="form-field">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje..." aria-describedby="message-error" required minlength="10"></textarea>
+                <small class="field-error" id="message-error">El mensaje debe tener al menos 10 caracteres.</small>
+              </div>
+
+              <input class="honeypot" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <button class="button button-primary submit-button" type="submit">
+                <span data-button-label>Enviar mensaje</span>
+                <svg aria-hidden="true"><use href="#icon-send"></use></svg>
+              </button>
+              <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand footer-brand" href="#inicio" aria-label="Volver al inicio">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span class="brand-name">Orlando Huapaya</span>
+        </a>
+
+        <p>Diseñado y desarrollado con <span role="img" aria-label="amor">♥</span> y mucho código.</p>
+
+        <div class="footer-meta">
+          <span>© <span data-current-year></span> Orlando Huapaya</span>
+          <a href="#inicio" aria-label="Volver arriba">
+            <svg aria-hidden="true"><use href="#icon-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

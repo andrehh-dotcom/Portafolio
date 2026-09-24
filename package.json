@@ -1,0 +1,19 @@
+{
+  "name": "portafolio-orlando-huapaya",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Portafolio personal de Orlando André Huapaya Huapaya.",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate:cv": "node scripts/generate-cv.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7"
+  }
+}
